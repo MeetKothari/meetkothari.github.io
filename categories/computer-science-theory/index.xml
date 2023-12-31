@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Meet Kothari</title>
-    <link>https://meetkothari.github.io/posts/</link>
-    <description>Recent content in Posts on Meet Kothari</description>
+    <title>Computer Science Theory on Meet Kothari</title>
+    <link>https://meetkothari.github.io/categories/computer-science-theory/</link>
+    <description>Recent content in Computer Science Theory on Meet Kothari</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>meetnkothari13@gmail.com (Meet Kothari)</managingEditor>
     <webMaster>meetnkothari13@gmail.com (Meet Kothari)</webMaster>
-    <lastBuildDate>Sat, 30 Dec 2023 20:30:02 -0500</lastBuildDate><atom:link href="https://meetkothari.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Dec 2023 20:30:02 -0500</lastBuildDate><atom:link href="https://meetkothari.github.io/categories/computer-science-theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Benefits of the Binary Search Algorithm</title>
       <link>https://meetkothari.github.io/posts/mypost/</link>
