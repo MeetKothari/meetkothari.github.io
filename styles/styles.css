@@ -10,20 +10,19 @@
     font-optical-sizing: auto;
     font-weight: 650;
     font-style: normal;
-    background-color: #341539;
-;
   }
 
 
 :root {
   --bg: #341539;
+  --nav-bg: #341539;
   --border: #EEDAD9;         
   --ink: #0a0a0a;            
   --card: #EF3B45;           
   --textLight: #F1E3E3;
   --text: #DDC3C3;
   --pill: #A376A2;
-  --pillText: #DDC3C3;
+  --pillText: white;
   --panel: #EF3B45;
   --panelText: #F7E9E9;
   --border: #EEDAD9;
@@ -34,7 +33,7 @@
 body {
   margin: 0;
   margin-top: 170px;
-  color: #000;
+  color: transparent;
   background: transparent;
 }
 
@@ -67,14 +66,14 @@ TODO:
   color: #DDC3C3;
   padding: 0.5rem 0.75rem;
   border-radius: 50%;        
-  background: #A376A2;        
+  background: transparent;        
   cursor: pointer;
   transition: transform 0.5s ease, background 0.5s ease;
 }
 
 #rotate-toggle:checked + .rotate-icon {
   transform: rotate(180deg);
-  background: #8D5F8C;   
+  background: transparent;   
   color: #0b192f;        
 }
 
@@ -82,6 +81,8 @@ TODO:
   background-color: #0b192f;  
   color: #DDC3C3;             
 }
+
+#theme-toggle { background: transparent; }
 
 #theme-toggle:checked ~ .site,
 #theme-toggle:checked ~ .navbar,
@@ -104,6 +105,13 @@ TODO:
 
 #theme-toggle:checked ~ .site .panel a:hover {
   color: #004a88;
+}
+
+#theme-toggle:checked ~ .navbar {
+  --bg: #ffffff;        /* background for light mode */
+  --pill: #e03157;      /* red pill in light mode */
+  --pillText: #ffffff;  /* white icon inside pill */
+  --scribble: #ef3b45;  /* red scribbles if you want consistency */
 }
 
 #theme-toggle:checked ~ .site{
@@ -315,13 +323,12 @@ TODO:
     position: sticky;
     top: 0; left: 0;
     width: 100%;
-    background-color: transparent;  
+    background-color: var(--nav-bg);  
     display: flex;
     justify-content: center;
     padding: 0.5rem 1rem;
     z-index: 1000;
     margin-bottom: 100px;
-    padding-bottom: 10px;
   }
   
   .navbar ul {
@@ -332,14 +339,14 @@ TODO:
   }
   
   .navbar li {
-    margin: 0;             
+    margin: 0;   
+    color: white;          
   }
   
   .navbar a {
     display: block;
-    text-decoration: none;
-    background-color: #A376A2;  
-    color: #DDC3C3;
+    text-decoration: none; 
+    color: white;
     font-weight: bold;
     padding: 8px 14px;
     border-radius: 14px;
@@ -347,9 +354,9 @@ TODO:
     margin: 0 6px;          
   }
   
-  .navbar a:hover {
+  /* .navbar a:hover {
     background-color: #A376A2;
-  }
+  } */
   
 /* About me / merged w the contact from before */
 
