@@ -10,12 +10,13 @@
     font-optical-sizing: auto;
     font-weight: 650;
     font-style: normal;
-    background-color: #8D5F8C;
+    background-color: #341539;
+;
   }
 
 
 :root {
-  --bg: #8D5F8C;
+  --bg: #341539;
   --border: #EEDAD9;         
   --ink: #0a0a0a;            
   --card: #EF3B45;           
@@ -27,13 +28,21 @@
   --panelText: #F7E9E9;
   --border: #EEDAD9;
   --ink: #0a0a0a;
+  --scribble: #DDC3C3;
 }
 
 body {
   margin: 0;
   margin-top: 170px;
   color: #000;
+  background: transparent;
 }
+
+.container {background: transparent; }
+
+.site { background: transparent; }
+
+.page { background: transparent; }
 
 /* 
 
@@ -106,12 +115,14 @@ TODO:
   --panelText: #F3ECEC;
   --border: #CDBFC0;
   --ink: #000000;
+  --scribble: #EF3B45;
 }
 
 /* Scribbles and Art stuff */
 
 .circle {
     position: relative;
+    background: transparent;
   }
   
   .circle::before {
@@ -120,7 +131,7 @@ TODO:
     top: -0.2em; left: -0.4em;
     width: 120%;
     height: 1.6em;
-    border: 3px solid #DDC3C3;; 
+    border: 3px solid var(--scribble); 
     border-radius: 50%;
     transform: rotate(-5deg); 
     z-index: -1; 
@@ -138,7 +149,7 @@ TODO:
     left: -0.4em;
     width: 125%;
     height: 1.8em;
-    border: 3px solid #DDC3C3;;
+    border: 3px solid var(--scribble);;
     border-radius: 50%;
     z-index: -1;
   }
@@ -151,6 +162,10 @@ TODO:
   .circle::before {
     transform: rotate(-3deg);
   }
+
+  /* 
+
+  With the WOW feature and headings, this is looking weird and I don't like it as much anymore. 
 
   .scribble-exclaim {
     display: inline-block;
@@ -179,47 +194,48 @@ TODO:
   
   .scribble-exclaim::after {
     transform: rotate(8deg) translate(2px, -2px);
-  }
+  } 
+    
+  */
 
-  .scribble-underline {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 8px;       
-  }
-  
-  .scribble-underline::before,
-  .scribble-underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 0;                 
-    border-bottom: 3px solid #DDC3C3;
-    border-radius: 50%;
-  }
-  
-  .scribble-underline::before {
-    bottom: 0;
-    transform: rotate(-2deg);
-    opacity: 0.8;
-  }
-  
-  .scribble-underline::after {
-    bottom: -4px;
-    transform: rotate(3deg);
-    opacity: 0.6;
-  }
+.scribble-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  background: transparent;
+}
+
+.scribble-underline::before,
+.scribble-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-bottom: 3px solid var(--scribble); /* <— here */
+  border-radius: 50%;
+}
+
+.scribble-underline::before {
+  bottom: 0;
+  transform: rotate(-2deg);
+  opacity: 0.8;
+}
+
+.scribble-underline::after {
+  bottom: -4px;
+  transform: rotate(3deg);
+  opacity: 0.6;
+}
 
 /* Index page stuff */
-.page {
-    color: #DDC3C3;
-}
 
 .welcome {
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #DDC3C3;
+    color: var(--scribble);
+    background: transparent;
   }
   
   .welcome span {
@@ -232,10 +248,20 @@ TODO:
     font-size: 1.2em; 
     display: inline-block;
     transform: translateY(0.1em); 
+    background: transparent;
+  }
+
+  .script {
+    background: transparent;
+  }
+
+  h1 {
+    background: transparent;
   }
 
 .intro {
     font-size: 40px;
+    background: transparent;
 }
 
 .intro > h2 {
@@ -246,10 +272,13 @@ TODO:
     margin-left: -80px;
 }
 
+.articles { background: transparent; }
+
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
+    background: transparent;
   }
   
   .article-card {
@@ -406,7 +435,8 @@ TODO:
 }
 
 .panel-row {
-    display: flex;               
+    display: flex;  
+    background: transparent;             
     gap: 2rem;                   
     justify-content: center;     
     align-items: flex-start;     
@@ -632,7 +662,7 @@ body{
 .navbar{ background: var(--bg); }
 
 #first-nav-bar a{
-  background: var(--pill);
+  background: var(--pill) !important;
   color: var(--pillText);
   text-decoration: none;
   border-radius: 20px;
@@ -782,3 +812,5 @@ a:hover {
   text-align: center;
   color: #fff;
 }
+
+
