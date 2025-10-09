@@ -5,8 +5,8 @@ This site serves as a personal portfolio and reading/watching log: a place to ex
 
 This site has a few key files:
 
-- `/index.html` – Home / landing page with current recs  
-- `/about.html` – About + background & philosophy  
-- `/reading.html` – Extended recommendations / reading list page  
-- `/references.html` – Links and resources I’ve used (documentation, inspiration)  
-- `/styles/` – CSS folder (`styles.css`, `theme.css`, etc.)
+- `/index.html` – in terms of the website from a user's perspective, this is the home/landing page with all my current recs  
+- `/about.html` – this is a biography page, with an about me section! 
+- `/reading.html` – this is an extended recommendations/reading list page, specifically with my 'Top 5' media.  
+- `/references.html` – this is where I keep the links and resources I’ve used (documentation, inspiration)  
+- `/styles/` – CSS folder 
